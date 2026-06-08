@@ -1,0 +1,16 @@
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\bin\Debug\net8.0\RuntimeTranslationBinding.Core.deps.json
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\bin\Debug\net8.0\RuntimeTranslationBinding.Core.dll
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\bin\Debug\net8.0\RuntimeTranslationBinding.Core.pdb
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\bin\Debug\net8.0\it-IT\RuntimeTranslationBinding.Core.resources.dll
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\RuntimeTranslationBinding.Core.Properties.Resources.resources
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\RuntimeTranslationBinding.Core.Properties.Resources.it-IT.resources
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\RuntimeTranslationBinding.Core.csproj.GenerateResource.cache
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\RuntimeTranslationBinding.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\RuntimeTranslationBinding.Core.AssemblyInfoInputs.cache
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\RuntimeTranslationBinding.Core.AssemblyInfo.cs
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\RuntimeTranslationBinding.Core.csproj.CoreCompileInputs.cache
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\it-IT\RuntimeTranslationBinding.Core.resources.dll
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\RuntimeTranslationBinding.Core.dll
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\refint\RuntimeTranslationBinding.Core.dll
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\RuntimeTranslationBinding.Core.pdb
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.Core\obj\Debug\net8.0\ref\RuntimeTranslationBinding.Core.dll

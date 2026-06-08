@@ -1,0 +1,27 @@
+using System.Windows;
+using System.Windows.Data;
+using RuntimeTranslationBinding.Core.Localization;
+
+namespace RuntimeTranslationBinding.Wpf.Localization;
+
+public sealed class LocalizationExtension : Binding
+{
+    public string? Key
+    {
+        get => null;
+        set
+        {
+            var key = value ?? string.Empty;
+            Path = new PropertyPath($"[{key}]");
+            FallbackValue = key;
+            Mode = BindingMode.OneWay;
+            Source = LocalizationService.CurrentTranslationSource;
+        }
+    }
+
+    public LocalizationExtension()
+    {
+        Mode = BindingMode.OneWay;
+        Source = LocalizationService.CurrentTranslationSource;
+    }
+}

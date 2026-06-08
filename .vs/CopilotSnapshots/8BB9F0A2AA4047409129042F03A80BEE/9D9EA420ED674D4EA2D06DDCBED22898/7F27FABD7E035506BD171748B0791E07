@@ -1,0 +1,12 @@
+﻿namespace RuntimeTranslationBinding.Localization
+{
+    public class LocalizationExtension : Binding
+    {
+        public LocalizationExtension(string name) : base("[" + name + "]")
+        {
+            this.Mode = BindingMode.OneWay;
+            this.Source = LocalizationService.CurrentTranslationSource;
+            this.FallbackValue = name;
+        }
+    }
+}

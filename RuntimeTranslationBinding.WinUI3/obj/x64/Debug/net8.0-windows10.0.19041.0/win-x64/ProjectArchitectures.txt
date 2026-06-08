@@ -1,0 +1,1 @@
+C:\Users\ITALGAS1\source\repos\RuntimeTranslationBinding\RuntimeTranslationBinding.WinUI3\RuntimeTranslationBinding.WinUI3.csproj;x64

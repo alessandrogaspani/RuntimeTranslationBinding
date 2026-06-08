@@ -1,0 +1,22 @@
+﻿using System.Windows;
+using RuntimeTranslationBinding.Wpf.Localization;
+
+namespace RuntimeTranslationBinding.Wpf;
+
+/// <summary>
+/// Interaction logic for App.xaml
+/// </summary>
+public partial class App : Application
+{
+    protected override void OnStartup(StartupEventArgs e)
+    {
+        base.OnStartup(e);
+
+        LocalizationService.ResourceManager = new System.Resources.ResourceManager("RuntimeTranslationBinding.Wpf.Properties.Resources", typeof(App).Assembly);
+        LocalizationService.ChangeCulture(LanguageValues.en_US);
+
+        var window = new MainWindow();
+        window.Show();
+    }
+}
+

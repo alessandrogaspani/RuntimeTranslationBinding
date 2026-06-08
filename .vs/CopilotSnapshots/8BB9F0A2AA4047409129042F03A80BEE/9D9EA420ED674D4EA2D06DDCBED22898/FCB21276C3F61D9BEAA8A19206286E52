@@ -1,0 +1,99 @@
+﻿using System;
+using System.ComponentModel;
+using System.Globalization;
+using System.Resources;
+using Microsoft.UI.Xaml;
+
+namespace RuntimeTranslationBinding.Localization
+{
+    public class LocalizationService
+    {
+        public static CultureInfo CurrentCulture => CultureInfo.CurrentCulture;
+
+        public static LanguageValues LanguageValue { get; private set; }
+
+        public static TranslationSource CurrentTranslationSource { get; set; }
+
+        public static ResourceManager ResourceManager { get => CurrentTranslationSource.ResManager; set => CurrentTranslationSource.ResManager = value; }
+
+        public static LanguageValues[] SupportedLanguages => new[]
+        {
+            LanguageValues.en_US,
+            LanguageValues.it_IT,
+        };
+
+        static LocalizationService()
+        {
+            CurrentTranslationSource = new TranslationSource();
+        }
+
+        public static void ChangeCulture(LanguageValues languageValue)
+        {
+            LanguageValue = languageValue;
+
+            var culture = GetCultureInfo(languageValue);
+
+            CultureInfo.CurrentCulture = culture;
+            CultureInfo.CurrentUICulture = culture;
+
+            CurrentTranslationSource.CurrentCulture = culture;
+        }
+
+        public static CultureInfo GetCultureInfo(LanguageValues cultureValue)
+        {
+            try
+            {
+                return cultureValue switch
+                {
+                    LanguageValues.en_US => new CultureInfo("en-US"),
+                    LanguageValues.it_IT => new CultureInfo("it-IT"),
+                    _ => new CultureInfo("en-US"),
+                };
+            }
+            catch (CultureNotFoundException)
+            {
+                return new CultureInfo("en-US");
+            }
+        }
+
+        public static string LocalizeString(string key)
+        {
+            if (ResourceManager == null)
+                throw new InvalidOperationException("Resource Manager must be not null");
+
+            var localizedString = CurrentTranslationSource[key];
+
+            if (string.IsNullOrEmpty(localizedString))
+                localizedString = $"#Missing_{key}#";
+
+            return localizedString;
+        }
+    }
+
+    public class TranslationSource : INotifyPropertyChanged
+    {
+        public ResourceManager? ResManager { get; set; }
+
+        private CultureInfo? _currentCulture;
+
+        public string this[string key]
+        {
+            get { return this.ResManager?.GetString(key, this._currentCulture) ?? string.Empty; }
+        }
+
+        public CultureInfo? CurrentCulture
+        {
+            get { return this._currentCulture; }
+            set
+            {
+                if (this._currentCulture != value)
+                {
+                    this._currentCulture = value;
+                    this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(string.Empty));
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+    }
+}

@@ -1,0 +1,47 @@
+﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Resources;
+
+namespace RuntimeTranslationBinding.Properties
+{
+    public static class Resources
+    {
+        public static ResourceManager ResourceManager { get; } = new DictionaryResourceManager();
+    }
+
+    internal sealed class DictionaryResourceManager : ResourceManager
+    {
+        private readonly Dictionary<string, Dictionary<string, string>> _values = new()
+        {
+            ["selezionaUDM"] = new Dictionary<string, string>
+            {
+                ["en-US"] = "Select UDM",
+                ["it-IT"] = "Seleziona UDM",
+            },
+        };
+
+        public override string? GetString(string name, CultureInfo? culture)
+        {
+            if (name is null)
+            {
+                return null;
+            }
+
+            var cultureName = culture?.Name ?? CultureInfo.CurrentUICulture.Name;
+
+            if (_values.TryGetValue(name, out var localizedByCulture) &&
+                localizedByCulture.TryGetValue(cultureName, out var value))
+            {
+                return value;
+            }
+
+            if (_values.TryGetValue(name, out localizedByCulture) &&
+                localizedByCulture.TryGetValue("en-US", out value))
+            {
+                return value;
+            }
+
+            return name;
+        }
+    }
+}

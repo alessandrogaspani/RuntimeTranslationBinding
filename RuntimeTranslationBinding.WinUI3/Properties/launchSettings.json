@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "RuntimeTranslationBinding (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "RuntimeTranslationBinding (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

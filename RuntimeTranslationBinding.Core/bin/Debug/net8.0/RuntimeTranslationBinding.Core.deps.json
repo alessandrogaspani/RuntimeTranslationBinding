@@ -1,0 +1,28 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "RuntimeTranslationBinding.Core/1.0.0": {
+        "runtime": {
+          "RuntimeTranslationBinding.Core.dll": {}
+        },
+        "resources": {
+          "it-IT/RuntimeTranslationBinding.Core.resources.dll": {
+            "locale": "it-IT"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RuntimeTranslationBinding.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
